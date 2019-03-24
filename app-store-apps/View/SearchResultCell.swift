@@ -2,12 +2,30 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
     
+    var appResult: Result! {
+        didSet {
+            nameLabel.text = appResult.trackName
+            categoryLable.text = appResult.primaryGenreName
+            ratingsLabel.text = "Rating: \(appResult.averageUserRating ?? 0.0)"
+            let url = URL(string: appResult.artworkUrl100)
+            appIconImageView.sd_setImage(with: url)
+            screenShot1ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[0]))
+            if appResult.screenshotUrls.count > 1 {
+                screenShot2ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[1]))
+            }
+            if appResult.screenshotUrls.count > 2 {
+                screenShot3ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[2]))
+            }
+        }
+    }
+    
     let appIconImageView: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .red
         image.widthAnchor.constraint(equalToConstant: 64).isActive = true
         image.heightAnchor.constraint(equalToConstant: 64).isActive = true
         image.layer.cornerRadius = 12
+        image.clipsToBounds = true
         return image
     }()
     
@@ -48,6 +66,11 @@ class SearchResultCell: UICollectionViewCell {
     func createScreenShotIMageView() -> UIImageView {
         let image = UIImageView()
         image.backgroundColor = .blue
+        image.layer.cornerRadius = 8
+        image.clipsToBounds = true
+        image.layer.borderWidth = 0.5
+        image.layer.borderColor = UIColor(white: 0.5, alpha: 0.5).cgColor
+        image.contentMode = .scaleAspectFill
         return image
     }
     
