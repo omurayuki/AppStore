@@ -4,11 +4,13 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
     
     let cellId = "cellId"
     var appGroup: AppGroup?
+    var didSelectHandler: ((FeedResult) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,5 +40,10 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: topBottomPadding, left: 0, bottom: topBottomPadding, right: 0)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let app = appGroup?.feed.results[indexPath.item] else { return }
+        didSelectHandler?(app)
     }
 }

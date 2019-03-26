@@ -31,6 +31,10 @@
 		C9E4855422492FFB0098AB04 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4855322492FFB0098AB04 /* SocialApp.swift */; };
 		C9E485572249CDE70098AB04 /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E485562249CDE70098AB04 /* HorizontalSnappingController.swift */; };
 		C9E485592249D5CF0098AB04 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E485582249D5CF0098AB04 /* BetterSnappingLayout.swift */; };
+		C9E4855C2249FFF80098AB04 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4855B2249FFF80098AB04 /* AppDetailController.swift */; };
+		C9E4855F224A0C050098AB04 /* AppDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4855E224A0C050098AB04 /* AppDetailCell.swift */; };
+		C9E48561224A2C8A0098AB04 /* AppPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E48560224A2C8A0098AB04 /* AppPreviewCell.swift */; };
+		C9E48563224A2F630098AB04 /* PreviewScreenshotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E48562224A2F630098AB04 /* PreviewScreenshotController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		C9E4855322492FFB0098AB04 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		C9E485562249CDE70098AB04 /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		C9E485582249D5CF0098AB04 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
+		C9E4855B2249FFF80098AB04 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
+		C9E4855E224A0C050098AB04 /* AppDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCell.swift; sourceTree = "<group>"; };
+		C9E48560224A2C8A0098AB04 /* AppPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewCell.swift; sourceTree = "<group>"; };
+		C9E48562224A2F630098AB04 /* PreviewScreenshotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewScreenshotController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +188,7 @@
 		C9E4853C2248C80E0098AB04 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				C9E4855A2249FFD60098AB04 /* Details */,
 				C9E4853D2248C8270098AB04 /* AppsPageController.swift */,
 				C9E485452248D4940098AB04 /* AppsHorizontalController.swift */,
 				C9E4854D2248EF760098AB04 /* AppsHeaderHorizontalController.swift */,
@@ -198,6 +207,7 @@
 		C9E485422248D17C0098AB04 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				C9E4855D224A0BF00098AB04 /* Details */,
 				C9E485432248D1880098AB04 /* AppsGroupCell.swift */,
 				C9E485472248E2080098AB04 /* AppRowCell.swift */,
 				C9E4854B2248ED9B0098AB04 /* AppsPageHeader.swift */,
@@ -212,6 +222,24 @@
 				C91D466922479F6C00A6B62C /* SearchResultCell.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		C9E4855A2249FFD60098AB04 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				C9E4855B2249FFF80098AB04 /* AppDetailController.swift */,
+				C9E48562224A2F630098AB04 /* PreviewScreenshotController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		C9E4855D224A0BF00098AB04 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				C9E4855E224A0C050098AB04 /* AppDetailCell.swift */,
+				C9E48560224A2C8A0098AB04 /* AppPreviewCell.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,11 +375,15 @@
 				C9E485502248F1DC0098AB04 /* AppsHeaderCell.swift in Sources */,
 				C91D466A22479F6C00A6B62C /* SearchResultCell.swift in Sources */,
 				C9E4854E2248EF760098AB04 /* AppsHeaderHorizontalController.swift in Sources */,
+				C9E4855C2249FFF80098AB04 /* AppDetailController.swift in Sources */,
 				C91D46642247887D00A6B62C /* BaseTabBarController.swift in Sources */,
 				C9E485522248FF520098AB04 /* AppGroup.swift in Sources */,
 				C9E485482248E2080098AB04 /* AppRowCell.swift in Sources */,
+				C9E48561224A2C8A0098AB04 /* AppPreviewCell.swift in Sources */,
+				C9E48563224A2F630098AB04 /* PreviewScreenshotController.swift in Sources */,
 				C91D466E2247A68200A6B62C /* UIView+Layout.swift in Sources */,
 				C9E485462248D4940098AB04 /* AppsHorizontalController.swift in Sources */,
+				C9E4855F224A0C050098AB04 /* AppDetailCell.swift in Sources */,
 				C9E4854A2248E2A00098AB04 /* Extensions.swift in Sources */,
 				C9E485572249CDE70098AB04 /* HorizontalSnappingController.swift in Sources */,
 			);
