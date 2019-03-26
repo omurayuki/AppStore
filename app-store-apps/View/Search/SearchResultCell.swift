@@ -50,7 +50,6 @@ class SearchResultCell: UICollectionViewCell {
     let getBtn: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("GET", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 14)
         button.backgroundColor = UIColor(white: 0.95, alpha: 1)
         button.widthAnchor.constraint(equalToConstant: 80).isActive = true
@@ -65,7 +64,6 @@ class SearchResultCell: UICollectionViewCell {
     
     func createScreenShotIMageView() -> UIImageView {
         let image = UIImageView()
-        image.backgroundColor = .blue
         image.layer.cornerRadius = 8
         image.clipsToBounds = true
         image.layer.borderWidth = 0.5
