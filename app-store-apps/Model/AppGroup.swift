@@ -6,7 +6,7 @@ struct AppGroup: Decodable {
 
 struct Feed: Decodable {
     let title: String
-    let results: [FeedResult]
+    let results: [FeedResult]?
 }
 
 struct FeedResult: Decodable {
