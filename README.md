@@ -12,7 +12,7 @@ To get started and run the app, you need to follow these simple steps:
 
 1. git clone this repository.
 2. Open the terminal, navigate to project folder and run "pod install".
-3. Run Quick Chat on your iPhone or the iOS Simulator.
+3. Run this app on your iPhone or the iOS Simulator.
 
 
 
